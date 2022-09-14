@@ -14,7 +14,7 @@ body {
 }
 
 .gradient-bg-welcome {
-    background-color: #fafafa;
+    background-color: #ffffff;
     background-image:
             radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%),
             radial-gradient(at 50% 0%, hsl(224, 97%, 35%) 0, transparent 50%),
