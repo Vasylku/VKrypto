@@ -16,9 +16,6 @@ import logo from "../logo.png";
 
 return (
    <nav className="w-full flex md:justify-center justify-between items-center p-4">
-        <div className="md:flex-[0.5] flex-initial justify-center items-center">
-            <img src={logo} alt="logo" className="w-46 cursor-pointer"/>
-        </div>
             <ul className="text-black md:flex hidden list-none flex-row justify-between items-center flex-initial">
                 {["Market", "Exchange", "Wallets", "Tutorials"].map((item, index) => (
               <NavBarItem key={item + index} title={item} />
@@ -27,7 +24,9 @@ return (
             Login
             </li>
             </ul>
-
+       <div className="md:flex-[0.5] flex-initial justify-center items-center">
+           <img src={logo} alt="logo" className="w-22 cursor-pointer"/>
+       </div>
        <div className="flex relative">
            {!toggleMenu && (
                <HiMenuAlt4 fontSize={28} className="text-black md:hidden cursor-pointer" onClick={() => setToggleMenu(true)}/>
