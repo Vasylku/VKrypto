@@ -4,7 +4,9 @@ import React, { useState } from "react";
 import logo from "../logo.png";
 
 const NavBarItem = ({ title, classProps }) => (
-	<li className={`mx-4 cursor-pointer ${classProps}`}>{title}</li>
+	<li className={`mx-4 cursor-pointer hover:text-white ${classProps}`}>
+		{title}
+	</li>
 );
 
 const Navbar = () => {
@@ -12,11 +14,11 @@ const Navbar = () => {
 
 	return (
 		<nav className="w-full flex md:justify-center justify-between items-center p-4">
-			<ul className="text-black md:flex hidden list-none flex-row justify-between items-center flex-initial">
+			<ul className="text-black  md:flex hidden list-none flex-row justify-between items-center flex-initial">
 				{["Market", "Exchange", "Wallets", "Tutorials"].map((item, index) => (
 					<NavBarItem key={item + index} title={item} />
 				))}
-				<li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
+				<li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd] hover:text-white">
 					Login
 				</li>
 			</ul>
