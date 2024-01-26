@@ -29,7 +29,7 @@ const Welcome = () => {
 		formData,
 		isLoading,
 	} = useContext(TransactionContext) || {};
-	console.log(formData);
+
 	const handleSubmit = (e) => {
 		const { addressTo, amount, keyword, message } = formData;
 
@@ -41,20 +41,20 @@ const Welcome = () => {
 	};
 
 	return (
-		<div className="flex w-full justify-center items-center  ">
+		<div className="flex w-full justify-center items-center ">
 			<div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4 ">
-				<div className="flex flex- justify-start items-start flex-col mf:mr-10 ">
-					<h1 className="text-3xl sm:text-5xl text-black py-1">
+				<div className="flex flex-1 justify-start items-start flex-col mf:mr-10">
+					<h1 className="text-3xl sm:text-5xl text-white text-gradient py-1">
 						Send Crypto <br /> across the world
 					</h1>
-					<p className="text-left mt-5 text-black font-light md:w-9/12 w-11/12 text-base">
+					<p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
 						Explore the crypto world. Buy and sell cryptocurrencies easily.
 					</p>
 					{!currentAccount && (
 						<button
 							type="button"
 							onClick={connectWallet}
-							className="flex w-full flex-row justify-center items-center my-5 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd]"
+							className="flex flex-row justify-center items-center my-5 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd]"
 						>
 							<AiFillPlayCircle className="text-white mr-2" />
 							<p className="text-white text-base font-semibold">
@@ -92,7 +92,7 @@ const Welcome = () => {
 							</div>
 							<div>
 								<p className="text-white font-light text-sm">
-									{shortenAddress(currentAccount)}
+									{currentAccount}
 								</p>
 								<p className="text-white font-semibold text-lg mt-1">
 									Ethereum
